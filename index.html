@@ -4,25 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wetter App</title>
-    <!-- Bootstrap CSS for modern styling -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100">
 
-    <main class="container mt-5">
-        <h1 class="mb-4">Wetter App</h1>
+    <main class="container mx-auto mt-10 p-4">
+        <h1 class="text-3xl font-bold mb-4">Wetter App</h1>
 
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Ort suchen</h2>
-                <div class="input-group mb-3">
-                    <input type="text" id="cityInput" class="form-control" placeholder="z.B. Berlin">
-                    <button id="searchBtn" class="btn btn-primary">Suchen</button>
-                </div>
+        <div class="w-full max-w-md">
+            <h2 class="text-2xl font-semibold mb-2">Ort suchen</h2>
+            <div class="flex mb-4">
+                <input type="text" id="cityInput" class="flex-grow p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="z.B. Berlin">
+                <button id="searchBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md">Suchen</button>
             </div>
         </div>
 
-        <div id="weatherResult" class="mt-4">
+        <div id="weatherResult" class="mt-6">
             <!-- Weather data will be displayed here -->
         </div>
 
